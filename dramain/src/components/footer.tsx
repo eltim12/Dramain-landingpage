@@ -6,16 +6,18 @@ import FaYoutube from '@/assets/footer-youtube.svg'
 import FaInstagram from '@/assets/footer-instagram.svg'
 import FaFacebook from '@/assets/footer-facebook.svg'
 import CompanyLogo from "@/assets/nav-logo.svg";
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear(); // Get current year dynamically
 
   // --- Data for Links (makes it easier to manage) ---
   const socialLinks = [
-    { href: 'https://www.tiktok.com/@dramein.app', label: 'TikTok', icon: FaTiktok },
+    { href: 'https://www.tiktok.com/@dramein.id', label: 'TikTok', icon: FaTiktok },
     { href: 'https://www.youtube.com/channel/UCgdFCS9KWDgRFPTDQvAaO7g', label: 'YouTube', icon: FaYoutube },
-    { href: 'https://www.instagram.com/dramein.app/', label: 'Instagram', icon: FaInstagram },
-    { href: 'https://www.facebook.com/profile.php?id=61575582304626', label: 'Facebook', icon: FaFacebook },
+    { href: 'https://www.instagram.com/dramein.id/', label: 'Instagram', icon: FaInstagram },
+    { href: 'https://www.facebook.com/profile.php?id=61577282187475', label: 'Facebook', icon: FaFacebook },
   ];
 
   const footerLinkSections = [
@@ -31,16 +33,13 @@ export const Footer = () => {
     {
       title: 'Platform',
       links: [
-        { href: '/customer-service', label: 'Customer Service' },
         { href: '/faq', label: 'FAQ' },
+        { href: '/tnc', label: 'Terms & Conditions' },
+        { href: '/legal', label: 'Legal & Compliance' },
       ],
     },
   ];
 
-  const legalLinks = [
-    { href: '/terms', label: 'Terms of Service' },
-    { href: '/privacy', label: 'Privacy Policy' },
-  ];
   // --- End Data ---
 
 
@@ -92,16 +91,16 @@ export const Footer = () => {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
 
               {/* Col 2 & 3: Links Sections */}
-              {footerLinkSections.map((section) => (
-                <div key={section.title} className="sm:col-span-1">
+              {footerLinkSections.map((section, index) => (
+                <div key={index} className="sm:col-span-1">
                   <h3 className="mb-3 text-base font-semibold tracking-wider text-white uppercase">
-                    {section.title}
+                    {t(`footer.sections.${section.title}`)}
                   </h3>
                   <ul className="space-y-2">
-                    {section.links.map((link) => (
-                      <li key={link.label}>
+                    {section.links.map((link, idx) => (
+                      <li key={idx}>
                         <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-                          {link.label}
+                          {t(`footer.links.${link.label}`)}
                         </Link>
                       </li>
                     ))}
@@ -122,7 +121,7 @@ export const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <span className="font-medium text-gray-200">Phone Number:</span>{' '}
+                    <span className="font-medium text-gray-200">Call:</span>{' '}
                     <a href="tel:+622019863801" className="hover:text-white transition-colors duration-200">
                       +62 (201) 986-3801
                     </a>
@@ -145,14 +144,6 @@ export const Footer = () => {
             &copy; {currentYear} Dramein. All rights reserved.
           </p>
 
-          {/* Legal Links */}
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:justify-end">
-            {legalLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-                {link.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

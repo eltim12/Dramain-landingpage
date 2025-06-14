@@ -16,12 +16,16 @@ import DeliverIcon from "@/assets/deliver-icon.svg"
 import EmpowerIcon from "@/assets/empower.svg"
 import HeroPhoneMockup from "@/assets/hero-phone.png"
 // import Feature from '@/assets/feature-1.png'
-import Feature from '@/assets/feature-img.png'
-import AppIcon from '@/assets/app-icon.svg'
+import Feature from '@/assets/feature-1.png'
+import Feature2 from '@/assets/feature-2.png'
+import Feature3 from '@/assets/feature-3.png'
+import AppIcon from '@/assets/app-icon2.svg'
 import downloadBg from '@/assets/download-bg.svg'
 import GooglePlayDownload from '@/assets/download-google-play.svg'
+import { useTranslation } from 'react-i18next';
 
 export default function IndexPage() {
+  const { t } = useTranslation();
   return (
     <DefaultLayout>
       {/* HERO */}
@@ -39,9 +43,9 @@ export default function IndexPage() {
         {/* Content container - helps with layering if needed */}
         <div className="relative z-10 flex flex-col items-center md:items-start justify-center gap-4 md:pl-[100px]">
           <div className="inline-block max-w-xl text-center md:text-left justify-start">
-            <span className="text-[18px] text-neutral-400">Discover Dramein <br /> </span>
+            <span className="text-[18px] text-neutral-400 font-bold"> {t('hero.sub')} <br /> </span>
             {/* Using text-white assuming the dark background */}
-            <span className="text-5xl text-white">Every second holds <br className="hidden" /> a{'\u00A0'}
+            <span className="text-6xl text-white font-bold">Every second holds <br className="hidden" /> a{'\u00A0'}
 
               <GradientText
                 colors={["#FD6D42", "#FA175D", "#9D794D", "#FA175D", "#634A80"]}
@@ -57,7 +61,7 @@ export default function IndexPage() {
             <br />
             {/* Using text-gray-300 for subtitle contrast */}
             <div className="mt-4 text-neutral-400 text-[16px]">
-              Immerse yourself in gripping short series, connect with live communities, and jump into thrilling game streams – all in one vibrant app.
+              {t('hero.desc')}
             </div>
           </div>
 
@@ -73,7 +77,7 @@ export default function IndexPage() {
                 alt="Dramein join button"
                 className="w-auto h-[16px] pa-16"
               />
-              <span className="text-white">Download Free Now</span>
+              <span className="text-white">{t('hero.download')}</span>
             </Button>
           </div>
         </div>
@@ -96,8 +100,8 @@ export default function IndexPage() {
                   className="w-auto h-[50px]"
                 />
               </div>
-              <h4 className="text-xl font-bold mb-2 text-white text-[40px] mb-[20px]">Deliver</h4>
-              <p className="text-base text-neutral-500">Curate and produce high-quality, culturally relevant short dramas that resonate deeply with our audience.</p>
+              <h4 className="text-xl font-bold mb-2 text-white text-[40px] mb-[20px]">{t('about.deliver.head')}</h4>
+              <p className="text-base text-neutral-500">{t('about.deliver.desc')}</p>
             </div>
 
             <div className="flex flex-col items-center text-center max-w-[300px]">
@@ -108,8 +112,8 @@ export default function IndexPage() {
                   className="w-auto h-[50px]"
                 />
               </div>
-              <h4 className="text-xl font-bold mb-2 text-white text-[40px] mb-[20px]">Empower</h4>
-              <p className="text-base text-neutral-500">Provide creators with innovative tools and a supportive environment to stream, grow, and thrive.</p>
+              <h4 className="text-xl font-bold mb-2 text-white text-[40px] mb-[20px]">{t('about.empower.head')}</h4>
+              <p className="text-base text-neutral-500">{t('about.empower.desc')}</p>
             </div>
 
             <div className="flex flex-col items-center text-center max-w-[300px]">
@@ -120,8 +124,8 @@ export default function IndexPage() {
                   className="w-auto h-[50px]"
                 />
               </div>
-              <h4 className="text-xl font-bold mb-2 text-white text-[40px] mb-[20px]">Connect</h4>
-              <p className="text-base text-neutral-500">Foster a vibrant, interactive community where users can share passions and build real connections.</p>
+              <h4 className="text-xl font-bold mb-2 text-white text-[40px] mb-[20px]">{t('about.connect.head')}</h4>
+              <p className="text-base text-neutral-500">{t('about.connect.desc')}</p>
             </div>
 
           </div>
@@ -130,7 +134,7 @@ export default function IndexPage() {
 
       {/* FEATURES */}
       <section className="flex flex-col"> {/* Consider adjusting padding/height if needed */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center h-[80vh] bg-black pb-3">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 md:gap-12 lg:gap-16 items-center h-auto bg-[#000001] py-[50px] md:py-0">
           {/* --- Image Column --- */}
           {/* Add 'justify-end' to the flex container div */}
           <img
@@ -138,77 +142,76 @@ export default function IndexPage() {
             alt="Short drama app interface examples"
             // Remove 'flex-end' from the image itself
             // Keep w-[400px] if a fixed width is desired, otherwise consider max-w-[400px] or responsive width like w-full
-            className="w-[100%] h-[100%] rounded-lg cover" // Added back rounded/shadow for visual consistency
+            className="w-[95%] h-auto rounded-lg p-[20px] md:p-[45px]" // Added back rounded/shadow for visual consistency
           />
 
           {/* --- Text Column --- */}
           <div className="text-left md:max-w-2xl px-5 md:pr-[80px]">
             {/* ... Label ... */}
             <p className="mb-2 text-sm font-semibold text-[#F82857] uppercase tracking-wider">
-              Binge Bites Drama
+              {t('feature.sub1')}
             </p>
             {/* ... Headline ... */}
             <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Addictive Short Dramas: Your Next Binge Awaits
+              {t('feature.head1')}
             </h2>
             {/* ... Paragraph ... */}
             <p className="text-base lg:text-lg text-gray-400">
-              Get hooked on exclusive, mobile-first drama series. Each episode is crafted for quick, emotional impact – perfect for your commute, break time, or unwinding. Discover new stories and support local talent.
+              {t('feature.desc1')}
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center h-[80vh] bg-black pb-3">
-
+        <div className="md:grid md:grid-cols-2 gap-0 md:gap-12 lg:gap-16 items-center h-auto bg-[#000001] py-[50px] md:py-0">
           {/* --- Text Column --- */}
           <div className="text-left md:max-w-2xl px-5 md:pl-[180px]">
             {/* ... Label ... */}
             <p className="mb-2 text-sm font-semibold text-[#F82857] uppercase tracking-wider">
-              Connect Live
+              {t('feature.sub2')}
             </p>
             {/* ... Headline ... */}
             <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Go Live or Connect: Real-Time Interaction
+              {t('feature.head2')}
             </h2>
             {/* ... Paragraph ... */}
             <p className="text-base lg:text-lg text-gray-400">
-              Join live streams from creators around the region. Chat, send virtual gifts, participate in polls, and feel closer to your favorite personalities and fellow fans than ever before.
+              {t('feature.desc2')}
             </p>
           </div>
 
           {/* --- Image Column --- */}
           {/* Add 'justify-end' to the flex container div */}
           <img
-            src={Feature} // Ensure 'Feature' is correctly imported or defined
+            src={Feature2} // Ensure 'Feature' is correctly imported or defined
             alt="Short drama app interface examples"
             // Remove 'flex-end' from the image itself
             // Keep w-[400px] if a fixed width is desired, otherwise consider max-w-[400px] or responsive width like w-full
-            className="w-[100%] h-[100%] rounded-lg cover" // Added back rounded/shadow for visual consistency
+            className="w-[100%] h-auto rounded-lg contain p-[20px] md:p-[45px]" // Added back rounded/shadow for visual consistency
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center h-[80vh] bg-black pb-3">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 md:gap-12 lg:gap-16 items-center h-auto bg-[#000001] py-[50px] md:py-[100px]">
           {/* --- Image Column --- */}
           {/* Add 'justify-end' to the flex container div */}
           <img
-            src={Feature} // Ensure 'Feature' is correctly imported or defined
+            src={Feature3} // Ensure 'Feature' is correctly imported or defined
             alt="Short drama app interface examples"
             // Remove 'flex-end' from the image itself
             // Keep w-[400px] if a fixed width is desired, otherwise consider max-w-[400px] or responsive width like w-full
-            className="w-[100%] h-[100%] rounded-lg cover" // Added back rounded/shadow for visual consistency
+            className="w-[100%] h-auto rounded-lg cover p-[20px] md:p-[45px]" // Added back rounded/shadow for visual consistency
           />
 
           {/* --- Text Column --- */}
           <div className="text-left md:max-w-2xl px-5 md:pr-[80px]">
             {/* ... Label ... */}
             <p className="mb-2 text-sm font-semibold text-[#F82857] uppercase tracking-wider">
-              Game & Watch
+              {t('feature.sub3')}
             </p>
             {/* ... Headline ... */}
             <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Game Streams: Excitement in Every Pixel
+              {t('feature.head3')}
             </h2>
             {/* ... Paragraph ... */}
             <p className="text-base lg:text-lg text-gray-400">
-              Watch top gamers showcase their skills, discover new games, or stream your own mobile gaming sessions. Connect with gaming communities and share the thrill of victory (and defeat!).
+              {t('feature.desc3')}
             </p>
           </div>
         </div>
@@ -224,7 +227,7 @@ export default function IndexPage() {
             <ShapeBlur
               variation={0}
               pixelRatioProp={window.devicePixelRatio || 1}
-              shapeSize={0.9}
+              shapeSize={0.8}
               roundness={0.5}
               borderSize={0.05}
               circleSize={0.5}
@@ -237,24 +240,26 @@ export default function IndexPage() {
             className="w-[80px] h-auto relative"
           />
         </div>
-        <span className="text-[14px] text-neutral-400 mb-2">Download Dramein for free<br /> </span>
+        <span className="text-[14px] text-neutral-400 mb-2">{t('download.sub')}<br /> </span>
         {/* Using more standard responsive text sizes, but kept close to original */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold mb-4 md:mb-6 max-w-4xl">
-          Your Entertainment <br /> Journey Starts Now.
+          {t('download.head').split('\n').map((line, idx) => (
+            <p key={idx}>{line}</p>
+          ))}
         </h2>
 
         {/* Paragraph - inherits text-center */}
         {/* max-w-3xl constrains width, items-center on parent centers the block */}
         <p className="max-w-4xl text-neutral-400 text-base md:text-lg"> {/* Standard text sizes */}
-          Don't miss out on the dramas everyone's talking about, the live moments you have to see, and the games you love to watch. Download Dramein today and step into a world of endless entertainment.
+          {t('download.desc')}
         </p>
 
         <img
           src={GooglePlayDownload}
           alt="Google play download"
-          className="w-auto h-[62px] relative mt-[80px]"
+          className="w-auto h-[47px] md:h-[62px] relative mt-[80px]"
         />
-        <span className="text-neutral-400 text-base mt-2">Coming soon to <span className="font-bold">App Store.</span> </span>
+        <span className="text-neutral-400 text-base mt-2">{t('download.comingSoon')} <span className="font-bold">{t('download.appStore')}</span> </span>
 
       </section>
 

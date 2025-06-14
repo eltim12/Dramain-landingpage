@@ -11,6 +11,7 @@ import {
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
+import { LanguageSwitch } from "@/components/languageSwitch";
 
 import { siteConfig } from "@/config/site";
 
@@ -59,11 +60,17 @@ export const Navbar = () => {
         ))}
       </NavbarContent>
 
+
+
       {/* Right Section: Actions */}
       {/* Use 'hidden sm:flex' to hide on xs, show on sm and up */}
       {/* 'justify="end"' will push it right */}
       <NavbarContent className="hidden sm:flex" justify="end">
         {/* Download Button - Hidden below 'md' (remains unchanged) */}
+
+        <NavbarItem className="hidden md:flex">
+          <LanguageSwitch />
+        </NavbarItem>
         <NavbarItem className="hidden md:flex">
           {/* Using Button component correctly now */}
           <Button
@@ -92,7 +99,7 @@ export const Navbar = () => {
       {/* Mobile: Menu Content - Remains largely the same */}
       {/* Ensure 'dark' class is applied if needed for theme consistency */}
       <NavbarMenu className="dark bg-background/80 backdrop-blur-md">
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-2 flex flex-col gap-2 h-[100vh]">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
@@ -107,18 +114,25 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
           {/* Download button in mobile menu */}
-          {/* <NavbarMenuItem>
+          <NavbarMenuItem className="flex flex-row justify-center items-center h-full pb-4">
+            <LanguageSwitch />
+
             <Button
               as={Link}
               href={siteConfig.links.sponsor}
-              color="primary"
-              variant="flat"
-              className="w-full" // Make button full width
-              size="lg" // Match link size
+              radius="lg"
+              variant="bordered"
+              className="border-white hover:bg-white/10 ml-5"
+              aria-label="Join/Download"
             >
-              Download for free
+              <img
+                src={joinButton}
+                alt="Dramein join button"
+                className="w-auto h-[24px]"
+              />
             </Button>
-          </NavbarMenuItem> */}
+          </NavbarMenuItem>
+
         </div>
       </NavbarMenu>
     </HeroUINavbar>

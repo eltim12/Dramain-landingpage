@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'General sans'; /* Choose a name for your font */
-  src: url('/fonts/general-sans.woff') format('woff');
+  src: url('/fonts/general-sans.ttf') format('ttf');
   font-weight: normal; /* Or 'normal' */
   font-style: normal;
   font-display: swap; /* Improves perceived performance */

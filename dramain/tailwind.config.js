@@ -11,6 +11,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['General Sans', 'ui-sans-serif', 'system-ui'], // Fallbacks are good!
+    },
   },
   darkMode: "class",
   plugins: [heroui()],
