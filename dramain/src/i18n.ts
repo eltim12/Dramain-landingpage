@@ -14,7 +14,8 @@ const resources = {
       footer: {
         sections: {
           Links: "Links",
-          Platform: "Platform"
+          Platform: "Platform",
+          "Support": "Need Help?"
         },
         links: {
           "About Us": "About Us",
@@ -24,7 +25,11 @@ const resources = {
           "FAQ": "FAQ",
           "Terms & Conditions": "Terms & Conditions",
           "Legal & Compliance": "Legal & Compliance"
-        }
+        },
+        "SIUPMSE1": "Directorate General of Consumer Protection and Trade Compliance",
+        "SIUPMSE2": "Ministry of Trade of the Republic of Indonesia",
+        "SIUPMSE3" : "WhatsApp of DG PKTN: ",
+        "Number": "+62 853 1111 1010"
       },
       hero: {
         sub: 'Discover Dramein',
@@ -246,7 +251,8 @@ const resources = {
       "footer": {
         "sections": {
           "Links": "Tautan",
-          "Platform": "Platform"
+          "Platform": "Platform",
+          "Support": "Butuh Bantuan?"
         },
         "links": {
           "About Us": "Tentang Kami",
@@ -256,7 +262,11 @@ const resources = {
           "FAQ": "FAQ",
           "Terms & Conditions": "Syarat & Ketentuan",
           "Legal & Compliance": "Legal & Kepatuhan"
-        }
+        },
+        "SIUPMSE1": "Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga",
+        "SIUPMSE2": "Kementerian Perdagangan Republik Indonesia",
+        "SIUPMSE3" : "Whatsapp Ditjen PKTN: ",
+        "Number": "+62 853 1111 1010"
       },
       "hero": {
         "sub": "Temukan Dramein",
@@ -475,8 +485,8 @@ i18next
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: 'id',
+    fallbackLng: 'id',
     interpolation: { escapeValue: false },
     detection: { order: ['localStorage', 'navigator'], caches: ['localStorage'] },
   });

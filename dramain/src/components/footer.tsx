@@ -111,7 +111,7 @@ export const Footer = () => {
               {/* Col 4: Contact Info */}
               <div className="sm:col-span-1">
                 <h3 className="mb-3 text-base font-semibold tracking-wider text-white uppercase">
-                  Socials
+                  {t(`footer.sections.Support`)}
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li>
@@ -121,11 +121,35 @@ export const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <span className="font-medium text-gray-200">Call:</span>{' '}
-                    <a href="tel:+622019863801" className="hover:text-white transition-colors duration-200">
-                      +62 (201) 986-3801
+                    <span className="font-medium text-gray-200">Whatsapp:</span>{' '}
+                    <a 
+                      href="https://wa.me/6287883428174"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors duration-200"
+                    >
+                      +62 878 8342 8174
                     </a>
                   </li>
+                  <br />
+                  <li>
+                    <span className="font-medium text-gray-200">{t(`footer.SIUPMSE1`)}</span>{' '}
+                  </li>
+                  <li>
+                    <span className="font-medium text-gray-200">{t(`footer.SIUPMSE2`)}</span>{' '}
+                  </li>
+                  <li>
+                    <span className="font-medium text-gray-200">{t(`footer.SIUPMSE3`)}</span>{' '}
+                    <a
+                      href="https://wa.me/6285311111010"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors duration-200"
+                    >
+                      {t(`footer.Number`)}
+                    </a>
+                  </li>
+
                 </ul>
               </div>
 

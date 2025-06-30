@@ -75,7 +75,7 @@ export const Navbar = () => {
           {/* Using Button component correctly now */}
           <Button
             as={Link} // Render button as a link
-            href={siteConfig.links.sponsor} // Make sure this links correctly
+            // href={siteConfig.links.sponsor} // Make sure this links correctly
             radius="lg"
             variant="bordered"
             className="border-white hover:bg-white/10" // Example styling for bordered button

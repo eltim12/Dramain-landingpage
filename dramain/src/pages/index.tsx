@@ -1,6 +1,5 @@
 // UI
 import { Button } from "@heroui/button";
-import { siteConfig } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
 
 // Components
@@ -45,7 +44,7 @@ export default function IndexPage() {
           <div className="inline-block max-w-xl text-center md:text-left justify-start">
             <span className="text-[18px] text-neutral-400 font-bold"> {t('hero.sub')} <br /> </span>
             {/* Using text-white assuming the dark background */}
-            <span className="text-6xl text-white font-bold">Every second holds <br className="hidden" /> a{'\u00A0'}
+            <span className="text-4xl md:text-6xl text-white font-bold">Every second holds <br className="hidden" /> a{'\u00A0'}
 
               <GradientText
                 colors={["#FD6D42", "#FA175D", "#9D794D", "#FA175D", "#634A80"]}
@@ -64,27 +63,39 @@ export default function IndexPage() {
               {t('hero.desc')}
             </div>
           </div>
+          <Button
+            className="px-[40px] py-[24px]"
+            radius="lg"
+            variant="bordered"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = 'https://github.com/eltim12/dramein-app/releases/download/v1.0.0/Dramein.apk';
+              link.download = 'https://github.com/eltim12/dramein-app/releases/download/v1.0.0/Dramein.apk';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
+            <img
+              src={DownloadIcon}
+              alt="Dramein join button"
+              className="w-auto h-[16px]"
+            />
+            <span className="text-white">{t('hero.download')}</span>
+          </Button>
 
-          <div className="flex-center md:flex-start gap-3 mt-4"> {/* Added some margin-top */}
-            <Button
-              className="px-[40px] py-[24px]"
-              radius="lg"
-              variant="bordered"
-              href={siteConfig.links.sponsor}
-            >
-              <img
-                src={DownloadIcon}
-                alt="Dramein join button"
-                className="w-auto h-[16px] pa-16"
-              />
-              <span className="text-white">{t('hero.download')}</span>
-            </Button>
-          </div>
         </div>
         <img
           src={HeroPhoneMockup}
           alt="Dramein APP mockup"
-          className="h-[550px] w-auto md:w-[448px] md:h-auto self-center md:absolute bottom-[-100px] md:bottom-0 right-[13.5%] md:right-[150px] "
+          className="
+            w-[250px] sm:w-[320px] md:w-[380px] lg:w-[448px] 
+            h-auto
+            self-center 
+            md:absolute 
+            bottom-[-80px] md:bottom-0 
+            right-[13.5%] md:right-[150px]
+          "
         />
       </section>
 
