@@ -64,13 +64,13 @@ export default function IndexPage() {
             </div>
           </div>
           <Button
-            className="px-[40px] py-[24px]"
+            className="h-[55px] px-[40px] py-[24px] mt-[5px] bg-[#F82757] hover:bg-[#e4255e] border-0"
             radius="lg"
-            variant="bordered"
-            onClick={() => {
+            variant="flat"
+            onPress={() => {
               const link = document.createElement('a');
-              link.href = 'https://github.com/eltim12/dramein-app/releases/download/v1.0.0/Dramein.apk';
-              link.download = 'https://github.com/eltim12/dramein-app/releases/download/v1.0.0/Dramein.apk';
+              link.href = 'https://drameinapp.dramein.vip/0610.apk';
+              link.setAttribute('download', '');
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
@@ -81,7 +81,7 @@ export default function IndexPage() {
               alt="Dramein join button"
               className="w-auto h-[16px]"
             />
-            <span className="text-white">{t('hero.download')}</span>
+            <span className="text-white text-lg font-bold">{t('hero.download')}</span>
           </Button>
 
         </div>
@@ -265,12 +265,33 @@ export default function IndexPage() {
           {t('download.desc')}
         </p>
 
-        <img
+        {/* <img
           src={GooglePlayDownload}
           alt="Google play download"
           className="w-auto h-[47px] md:h-[62px] relative mt-[80px]"
-        />
-        <span className="text-neutral-400 text-base mt-2">{t('download.comingSoon')} <span className="font-bold">{t('download.appStore')}</span> </span>
+        /> */}
+
+        <Button
+          className="h-[55px] px-[40px] py-[24px] mt-[80px] bg-[#F82757] hover:bg-[#F82757] border-0"
+          radius="lg"
+          variant="flat"
+          onPress={() => {
+            const link = document.createElement('a');
+            link.href = 'https://drameinapp.dramein.vip/0610.apk';
+            link.setAttribute('download', '');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
+        >
+          <img
+            src={DownloadIcon}
+            alt="Dramein join button"
+            className="w-auto h-[16px]"
+          />
+          <span className="text-white text-lg font-bold">{t('hero.download')}</span>
+        </Button>
+        <span className="text-neutral-400 text-base mt-2">{t('download.comingSoon')} <span className="font-bold">{t('download.googleStore')}{t('download.appStore')}</span> </span>
 
       </section>
 

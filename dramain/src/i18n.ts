@@ -55,6 +55,7 @@ const resources = {
         head: 'Your Entertainment\nJourney Starts Now.',
         desc: 'Don\'t miss out on the dramas everyone\'s talking about, the live moments you have to see, and the games you love to watch. Download Dramein today and step into a world of endless entertainment.',
         comingSoon: 'Coming soon to',
+        googleStore: 'Google Store & ',
         appStore: 'App Store.'
       },
       feature: {
@@ -292,6 +293,7 @@ const resources = {
         "head": "Petualangan Hiburanmu\nDimulai Sekarang.",
         "desc": "Jangan sampai ketinggalan drama yang lagi ramai dibicarakan, momen live yang seru, dan game favorit yang wajib ditonton. Unduh Dramein hari ini dan masuk ke dunia hiburan tanpa batas!",
         "comingSoon": "Segera hadir di",
+        "googleStore": 'Google Store & ',
         "appStore": "App Store."
       },
       "feature": {
