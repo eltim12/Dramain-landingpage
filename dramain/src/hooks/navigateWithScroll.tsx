@@ -1,16 +1,22 @@
 // utils/navigateWithScroll.ts
-import { useRouter } from 'next/navigation';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export function navigateWithScroll(router: ReturnType<typeof useRouter>, id: string) {
-  if (typeof window === 'undefined') return;
+export function useNavigateWithScroll() {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const onIndexPage = window.location.pathname === '/';
-  if (onIndexPage) {
-    const el = document.querySelector(`#${id}`);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+  return (id: string) => {
+    if (typeof window === 'undefined') return;
+
+    const onIndexPage = location.pathname === '/';
+
+    if (onIndexPage) {
+      const el = document.querySelector(`#${id}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(`/#${id}`);
     }
-  } else {
-    router.push(`/#${id}`);
-  }
+  };
 }
