@@ -24,10 +24,9 @@ export const Footer = () => {
     {
       title: 'Links',
       links: [
-        { href: '/about', label: 'About Us' },
-        { href: '/features', label: 'Features' },
-        { href: '/partners', label: 'Partners' },
-        { href: '/download', label: 'Download' },
+        { href: '/#about', label: 'About Us' },
+        { href: '/#features', label: 'Features' },
+        { href: '/#download', label: 'Download' },
       ],
     },
     {

@@ -6,33 +6,37 @@ export const siteConfig = {
   navItems: [
     {
       label: "About Us",
-      href: "/about",
+      href: "/#about",
     },
     {
       label: "Features",
-      href: "/features",
+      href: "/#features",
     },
     {
       label: "Download",
-      href: "/download",
+      href: "/#download",
     },
     {
-      label: "Legalities",
+      label: "Legality",
       href: "/legal",
     },
   ],
   navMenuItems: [
     {
       label: "About Us",
-      href: "/about",
+      href: "/#about",
     },
     {
       label: "Features",
-      href: "/features",
+      href: "/#features",
     },
     {
       label: "Download",
-      href: "/download",
+      href: "/#download",
+    },
+    {
+      label: "Legality",
+      href: "/legal",
     },
   ],
   links: {

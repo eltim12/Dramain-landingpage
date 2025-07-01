@@ -9,7 +9,7 @@ export default function DefaultLayout({
 }) {
   return (
     // The main container setup is likely fine
-    <div className="relative flex flex-col h-screen bg-[#171717]">
+    <div className="relative flex flex-col h-screen bg-[#171717] scroll-smooth" >
       {/* Navbar is rendered, but its fixed position takes it out of the layout flow */}
       <Navbar />
 

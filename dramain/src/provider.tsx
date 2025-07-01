@@ -13,7 +13,7 @@ export function Provider({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
 
   return (
-    <HeroUIProvider navigate={navigate} useHref={useHref} className="font-sans">
+    <HeroUIProvider navigate={navigate} useHref={useHref} className="font-sans smooth-scroll">
       {children}
     </HeroUIProvider>
   );

@@ -23,10 +23,11 @@ import AppIcon from '@/assets/app-icon2.svg'
 import downloadBg from '@/assets/download-bg.svg'
 // import GooglePlayDownload from '@/assets/download-google-play.svg'
 import { useTranslation } from 'react-i18next';
+import useHashScroll from '@/hooks/useHashScroll';
 
 export default function IndexPage() {
   const { t } = useTranslation();
-
+  useHashScroll()
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -34,6 +35,7 @@ export default function IndexPage() {
     <DefaultLayout>
       {/* HERO */}
       <section
+        id="about"
         className="
           relative /* Keep relative */
           flex flex-col items-start pt-[130px] md:pt-0 md:justify-center gap-4
@@ -149,7 +151,7 @@ export default function IndexPage() {
       </section>
 
       {/* FEATURES */}
-      <section className="flex flex-col"> {/* Consider adjusting padding/height if needed */}
+      <section id="features" className="flex flex-col"> {/* Consider adjusting padding/height if needed */}
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 md:gap-12 lg:gap-16 items-center h-auto bg-[#000001] py-[50px] md:py-0">
           {/* --- Image Column --- */}
           {/* Add 'justify-end' to the flex container div */}
@@ -234,7 +236,7 @@ export default function IndexPage() {
       </section>
 
       {/* DOWNLOAD NOW */}
-      <section
+      <section id="download"
         className="py-16 md:py-20 bg-black h-[80vh] flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat px-[20px]"
         style={{ backgroundImage: `url("${downloadBg}")` }}
       >
