@@ -3,9 +3,14 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import titleEllipse from '@/assets/title-ellipse.svg'
 import { useTranslation } from 'react-i18next';
+import { useEffect } from "react";
 
 export default function IndexPage() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <DefaultLayout>
 

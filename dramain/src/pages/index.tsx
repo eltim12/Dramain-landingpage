@@ -1,6 +1,7 @@
 // UI
 import { Button } from "@heroui/button";
 import DefaultLayout from "@/layouts/default";
+import { useEffect } from "react";
 
 // Components
 import GradientBlobOrange from "@/components/gradientBlobOrange"
@@ -20,11 +21,15 @@ import Feature2 from '@/assets/feature-2.png'
 import Feature3 from '@/assets/feature-3.png'
 import AppIcon from '@/assets/app-icon2.svg'
 import downloadBg from '@/assets/download-bg.svg'
-import GooglePlayDownload from '@/assets/download-google-play.svg'
+// import GooglePlayDownload from '@/assets/download-google-play.svg'
 import { useTranslation } from 'react-i18next';
 
 export default function IndexPage() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <DefaultLayout>
       {/* HERO */}
@@ -32,7 +37,7 @@ export default function IndexPage() {
         className="
           relative /* Keep relative */
           flex flex-col items-start pt-[130px] md:pt-0 md:justify-center gap-4
-          py-10 px-[20px] md:px-[70px] h-screen
+          py-10 px-[20px] md:px-[70px] h-[126vh] md:h-screen
           bg-[#171717]
           overflow-hidden /* Keep for now, but check if it hides the blob */
         "
@@ -69,7 +74,7 @@ export default function IndexPage() {
             variant="flat"
             onPress={() => {
               const link = document.createElement('a');
-              link.href = 'https://drameinapp.dramein.vip/0610.apk';
+              link.href = 'https://drameinapp.dramein.vip/0630.apk';
               link.setAttribute('download', '');
               document.body.appendChild(link);
               link.click();
@@ -89,8 +94,8 @@ export default function IndexPage() {
           src={HeroPhoneMockup}
           alt="Dramein APP mockup"
           className="
-            w-[250px] sm:w-[320px] md:w-[380px] lg:w-[448px] 
-            h-auto
+            w-[100%] sm:w-[100%] md:w-[380px] lg:w-[448px] 
+            w-auto
             self-center 
             md:absolute 
             bottom-[-80px] md:bottom-0 
@@ -277,7 +282,7 @@ export default function IndexPage() {
           variant="flat"
           onPress={() => {
             const link = document.createElement('a');
-            link.href = 'https://drameinapp.dramein.vip/0610.apk';
+            link.href = 'https://drameinapp.dramein.vip/0630.apk';
             link.setAttribute('download', '');
             document.body.appendChild(link);
             link.click();

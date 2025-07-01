@@ -2,10 +2,14 @@
 import DefaultLayout from "@/layouts/default";
 import titleEllipse from '@/assets/title-ellipse.svg'
 import { useTranslation } from 'react-i18next';
+import { useEffect } from "react";
 
 export default function IndexPage() {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <DefaultLayout>
       <div className="min-h-screen bg-[#06070B] relative overflow-hidden justify-items-center">

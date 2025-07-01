@@ -16,6 +16,10 @@ export const siteConfig = {
       label: "Download",
       href: "/download",
     },
+    {
+      label: "Legalities",
+      href: "/legal",
+    },
   ],
   navMenuItems: [
     {
