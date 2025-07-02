@@ -93,7 +93,7 @@ export default function IndexPage() {
                     <h3 className="font-bold text-xl">Essential</h3>
                     <p className="text-sm">Valid for 30 Days</p>
                   </div>
-                  <img src={essentialIcon} className="w-10 h-10 md:hidden" />
+
                 </div>
 
                 <ul className="text-sm mt-2 list-disc list-inside space-y-1 relative z-10">
@@ -123,7 +123,7 @@ export default function IndexPage() {
                     <h3 className="font-bold text-xl">Prestige</h3>
                     <p className="text-sm">Valid for 12 Months</p>
                   </div>
-                  <img src={prestigeIcon} className="w-10 h-10 md:hidden" />
+
                 </div>
 
                 <ul className="text-sm mt-2 list-disc list-inside space-y-1 relative z-10">
@@ -151,7 +151,7 @@ export default function IndexPage() {
               <div className="bg-zinc-800 p-4 rounded-xl relative overflow-visible">
                 <img
                   src={carIcon}
-                  className="absolute -right-2 w-[200px] h-[200px] pointer-events-none select-none"
+                  className="absolute -right-2 w-[150px] h-[150px] md:w-[200px] md:h-[200px] pointer-events-none select-none"
                   alt="Starter Icon"
                 />
                 <p className="text-sm text-gray-400 mb-2 relative z-10">Standard</p>
