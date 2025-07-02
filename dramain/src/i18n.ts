@@ -240,6 +240,10 @@ const resources = {
           },
         },
       },
+      topup: {
+        header: "Top Up Cheaper Here!",
+        intro: "Top up directly from Dramein’s official website and feel the difference! Prices here are much cheaper than topping up through the app. The process is fast, automatic, and 100% secure—managed directly by Dramein’s official team, a legally registered company in Indonesia. <br/><br/> Buy your Dramein coins now and enjoy more short dramas and exciting live streams without limits!"
+      }
     },
   },
   id: {
@@ -478,6 +482,10 @@ const resources = {
           },
         },
       },
+      topup: {
+        header: "Top Up Lebih Hemat di Sini!",
+        intro: "Top up langsung dari website resmi Dramein dan rasakan keuntungannya! Harga top up di sini jauh lebih murah dibandingkan jika kamu melakukannya melalui aplikasi. Prosesnya cepat, otomatis, dan tentunya aman karena langsung dikelola oleh tim resmi Dramein, perusahaan berbadan hukum di Indonesia. <br/><br/ >Beli koin Dramein sekarang juga dan nikmati lebih banyak drama pendek serta siaran langsung favoritmu tanpa hambatan!"
+      }
     },
   },
 };
