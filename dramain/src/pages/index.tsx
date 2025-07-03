@@ -76,7 +76,7 @@ export default function IndexPage() {
             variant="flat"
             onPress={() => {
               const link = document.createElement('a');
-              link.href = 'https://drameinapp.dramein.vip/0630.apk';
+              link.href = 'https://drameinapp.dramein.vip/0703.apk';
               link.setAttribute('download', '');
               document.body.appendChild(link);
               link.click();
