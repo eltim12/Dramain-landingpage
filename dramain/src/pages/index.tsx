@@ -2,6 +2,7 @@
 import { Button } from "@heroui/button";
 import DefaultLayout from "@/layouts/default";
 import { useEffect } from "react";
+import { Link } from "@heroui/link";
 
 // Components
 import GradientBlobOrange from "@/components/gradientBlobOrange"
@@ -24,6 +25,7 @@ import downloadBg from '@/assets/download-bg.svg'
 // import GooglePlayDownload from '@/assets/download-google-play.svg'
 import { useTranslation } from 'react-i18next';
 import useHashScroll from '@/hooks/useHashScroll';
+import { siteConfig } from "@/config/site";
 
 export default function IndexPage() {
   const { t } = useTranslation();
@@ -74,14 +76,8 @@ export default function IndexPage() {
             className="h-[55px] px-[40px] py-[24px] mt-[5px] bg-[#F82757] hover:bg-[#e4255e] border-0"
             radius="lg"
             variant="flat"
-            onPress={() => {
-              const link = document.createElement('a');
-              link.href = 'https://drameinapp.dramein.vip/0703.apk';
-              link.setAttribute('download', '');
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
+            as={Link} // Render button as a link
+            href={siteConfig.links.join} // Make sure this links correctly
           >
             <img
               src={DownloadIcon}
@@ -284,7 +280,7 @@ export default function IndexPage() {
           variant="flat"
           onPress={() => {
             const link = document.createElement('a');
-            link.href = 'https://drameinapp.dramein.vip/0630.apk';
+            link.href = 'https://drameinapp.dramein.vip/0703.apk';
             link.setAttribute('download', '');
             document.body.appendChild(link);
             link.click();
@@ -296,7 +292,7 @@ export default function IndexPage() {
             alt="Dramein join button"
             className="w-auto h-[16px]"
           />
-          <span className="text-white text-lg font-bold">{t('hero.download')}</span>
+          <span className="text-white text-lg font-bold">{t('download.download')}</span>
         </Button>
         <span className="text-neutral-400 text-base mt-2">{t('download.comingSoon')} <span className="font-bold">{t('download.googleStore')}{t('download.appStore')}</span> </span>
 

@@ -34,7 +34,7 @@ const resources = {
       hero: {
         sub: 'Discover Dramein',
         desc: 'Immerse yourself in gripping short series, connect with live communities, and jump into thrilling game streams – all in one vibrant app.',
-        download: 'Download free now!',
+        download: 'Join & Download now!',
       },
       about: {
         deliver: {
@@ -56,7 +56,8 @@ const resources = {
         desc: 'Don\'t miss out on the dramas everyone\'s talking about, the live moments you have to see, and the games you love to watch. Download Dramein today and step into a world of endless entertainment.',
         comingSoon: 'Coming soon to',
         googleStore: 'Google Store & ',
-        appStore: 'App Store.'
+        appStore: 'App Store.',
+        download: 'Download for Free now!'
       },
       feature: {
         sub1: 'Binge Bites Drama',
@@ -141,9 +142,9 @@ const resources = {
             },
             rewards: {
               title: 'Reward Percentages (Essential VIP)',
-              level1: 'Level 1 (Direct Friend - Friend A): 30% virtual reward from eligible purchases.',
+              level1: 'Level 1 (Direct Friend - Friend A): 40% virtual reward from eligible purchases.',
               level2: 'Level 2 (Friend B, invited by A): 20% virtual reward from eligible purchases.',
-              level3: 'Level 3 (Friend C, invited by B): 10% virtual reward from eligible purchases.',
+              level3: 'Level 3 (Friend C, invited by B): 15% virtual reward from eligible purchases.',
             },
             purchaseRewards: {
               title: 'Purchase Reward Percentages',
@@ -162,9 +163,9 @@ const resources = {
             },
             rewards: {
               title: 'Reward Percentages (Prestige VIP)',
-              level1: 'Level 1: 40%',
+              level1: 'Level 1: 50%',
               level2: 'Level 2: 20%',
-              level3: 'Level 3: 10%',
+              level3: 'Level 3: 20%',
             },
             purchaseRewards: {
               title: 'Purchase Reward Percentages',
@@ -276,7 +277,7 @@ const resources = {
       "hero": {
         "sub": "Temukan Dramein",
         "desc": "Nikmati drama pendek yang seru, terhubung dengan komunitas live, dan ikuti keseruan game streaming – semuanya dalam satu aplikasi penuh warna.",
-        "download": "Unduh gratis sekarang!"
+        "download": "Gabung & Unduh sekarang!"
       },
       "about": {
         "deliver": {
@@ -298,7 +299,8 @@ const resources = {
         "desc": "Jangan sampai ketinggalan drama yang lagi ramai dibicarakan, momen live yang seru, dan game favorit yang wajib ditonton. Unduh Dramein hari ini dan masuk ke dunia hiburan tanpa batas!",
         "comingSoon": "Segera hadir di",
         "googleStore": 'Google Store & ',
-        "appStore": "App Store."
+        "appStore": "App Store.",
+        download: 'Unduh gratis sekarang!'
       },
       "feature": {
         "sub1": "Drama Pendek Langsung",
@@ -383,9 +385,9 @@ const resources = {
             },
             rewards: {
               title: 'Persentase Hadiah (Essential VIP)',
-              level1: 'Level 1 (Teman langsung - Teman A): Hadiah virtual senilai 30% dari pembelian yang memenuhi syarat.',
+              level1: 'Level 1 (Teman langsung - Teman A): Hadiah virtual senilai 40% dari pembelian yang memenuhi syarat.',
               level2: 'Level 2 (Teman B, diundang oleh A): Hadiah virtual senilai 20% dari pembelian.',
-              level3: 'Level 3 (Teman C, diundang oleh B): Hadiah virtual senilai 10% dari pembelian.',
+              level3: 'Level 3 (Teman C, diundang oleh B): Hadiah virtual senilai 15% dari pembelian.',
             },
             purchaseRewards: {
               title: 'Pembelian Drama Penuh / Paket VIP / Produk Toko Masa Depan',
@@ -404,9 +406,9 @@ const resources = {
             },
             rewards: {
               title: 'Persentase Hadiah (Prestige VIP)',
-              level1: 'Level 1: 40%',
+              level1: 'Level 1: 50%',
               level2: 'Level 2: 20%',
-              level3: 'Level 3: 10%',
+              level3: 'Level 3: 50%',
             },
             purchaseRewards: {
               title: 'Pembelian Drama Penuh / Paket VIP / Produk Toko Masa Depan',
