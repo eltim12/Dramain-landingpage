@@ -36,10 +36,11 @@ export default function IndexPage() {
           </div>
         </div>
         {/* Grid Button Section */}
+        {/* Grid Button Section */}
         <div className="max-w-3xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
           <a href="/legal/akta-pendirian.pdf" target="_blank" rel="noopener noreferrer">
             <Button
-              className="w-full h-[80px] text-white text-md font-bold hover:text-black"
+              className="w-full h-[80px] text-white text-md font-bold hover:bg-[#F82857]"
               size="lg"
               variant="ghost"
             >
@@ -49,7 +50,7 @@ export default function IndexPage() {
 
           <a href="/legal/keputusan-menteri.pdf" target="_blank" rel="noopener noreferrer">
             <Button
-              className="w-full h-[80px] text-white text-md font-bold hover:text-black"
+              className="w-full h-[80px] text-white text-md font-bold hover:bg-[#F82857]"
               size="lg"
               variant="ghost"
             >
@@ -59,7 +60,7 @@ export default function IndexPage() {
 
           <a href="/legal/nib.pdf" target="_blank" rel="noopener noreferrer">
             <Button
-              className="w-full h-[80px] text-white text-md font-bold hover:text-black"
+              className="w-full h-[80px] text-white text-md font-bold hover:bg-[#F82857]"
               size="lg"
               variant="ghost"
             >
@@ -69,7 +70,7 @@ export default function IndexPage() {
 
           <a href="/legal/pse.pdf" target="_blank" rel="noopener noreferrer">
             <Button
-              className="w-full h-[80px] text-white text-md font-bold hover:text-black"
+              className="w-full h-[80px] text-white text-md font-bold hover:bg-[#F82857]"
               size="lg"
               variant="ghost"
             >
